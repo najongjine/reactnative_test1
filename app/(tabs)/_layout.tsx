@@ -5,6 +5,7 @@ import { HapticTab } from "@/components/haptic-tab";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { Colors } from "@/constants/theme";
 import { useColorScheme } from "@/hooks/use-color-scheme";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabLayout() {
@@ -34,6 +35,17 @@ export default function TabLayout() {
             title: "Explore",
             tabBarIcon: ({ color }) => (
               <IconSymbol size={28} name="paperplane.fill" color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="Testpage1"
+          options={{
+            title: "테스트화면1",
+            // 2. tabBarIcon을 AntDesign 컴포넌트로 변경
+            tabBarIcon: ({ color }) => (
+              // size와 color 속성은 props로 받은 color를 그대로 사용
+              <AntDesign name="android" size={28} color={color} />
             ),
           }}
         />
