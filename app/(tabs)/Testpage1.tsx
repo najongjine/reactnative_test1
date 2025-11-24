@@ -33,6 +33,7 @@ export default function TestPage1() {
       console.log(`num2: `, num2);
       let result = num1 + num2;
       console.log(`result: `, result);
+      alert(result);
     }
   }
 
