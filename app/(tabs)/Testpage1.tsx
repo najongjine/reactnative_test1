@@ -4,6 +4,7 @@ import { Appearance, StyleSheet, Text, TextInput, View } from "react-native";
 export default function TestPage1() {
   // 현재 색상 스키마를 가져옵니다 (light 또는 dark)
   const [colorScheme, setColorScheme] = useState(Appearance.getColorScheme());
+  const [mytext, setMytext] = useState<string>("");
 
   // ⭐️ 스키마 변경을 감지하고 상태를 업데이트합니다.
   useEffect(() => {
