@@ -17,6 +17,10 @@ export default function TestPage1() {
   const isDark = colorScheme === "dark";
   const themeStyles = isDark ? darkStyles : lightStyles;
 
+  function myadd(num1: number, num2: number) {
+    let result = num1 + num2;
+  }
+
   return (
     <View style={[styles.container, themeStyles.container]}>
       <Text style={themeStyles.text}>
