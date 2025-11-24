@@ -23,7 +23,17 @@ export default function TestPage1() {
     setMytext(e);
   }
   function myadd() {
-    alert(`앤터 쳤어요`);
+    let add_operator = mytext.includes(`+`);
+    if (add_operator) {
+      let str_nums = mytext.split("+");
+      console.log(`str nums: `, str_nums);
+      let num1 = Number(str_nums[0]);
+      console.log(`num1: `, num1);
+      let num2 = Number(str_nums[1]);
+      console.log(`num2: `, num2);
+      let result = num1 + num2;
+      console.log(`result: `, result);
+    }
   }
 
   return (
