@@ -31,6 +31,7 @@ export default function TestPage1() {
         현재 테마: {colorScheme === "dark" ? "다크 모드" : "라이트 모드"}
       </Text>
       <TextInput
+        value={mytext}
         style={[styles.input, themeStyles.input]}
         placeholderTextColor={isDark ? "#AAAAAA" : "#666666"}
         placeholder="텍스트를 입력하세요"
