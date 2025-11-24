@@ -32,6 +32,9 @@ export default function TestPage1() {
         placeholderTextColor={isDark ? "#AAAAAA" : "#666666"}
         placeholder="텍스트를 입력하세요"
       />
+      <View>
+        <Text>mytext : {mytext}</Text>
+      </View>
     </View>
   );
 }
