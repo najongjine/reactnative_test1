@@ -1,10 +1,13 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function Testpage1() {
   return (
     <ScrollView>
       <View>
-        <Text>test1 페이지 에요</Text>
+        <Text style={styles.stepContainer}>계산기</Text>
+      </View>
+      <View>
+        <TextInput placeholder="입력해 주세요" />
       </View>
     </ScrollView>
   );
@@ -18,7 +21,7 @@ const styles = StyleSheet.create({
   },
   stepContainer: {
     gap: 8,
-    marginBottom: 8,
+    margin: 16,
   },
   reactLogo: {
     height: 178,
