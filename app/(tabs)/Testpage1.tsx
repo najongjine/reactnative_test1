@@ -18,6 +18,9 @@ export default function TestPage1() {
   const isDark = colorScheme === "dark";
   const themeStyles = isDark ? darkStyles : lightStyles;
 
+  function onTextInputChange(e: string) {
+    setMytext(e);
+  }
   function myadd(num1: number, num2: number) {
     let result = num1 + num2;
   }
@@ -31,6 +34,7 @@ export default function TestPage1() {
         style={[styles.input, themeStyles.input]}
         placeholderTextColor={isDark ? "#AAAAAA" : "#666666"}
         placeholder="텍스트를 입력하세요"
+        onChangeText={onTextInputChange}
       />
       <View>
         <Text>mytext : {mytext}</Text>
