@@ -5,6 +5,7 @@ export default function TestPage1() {
   // 현재 색상 스키마를 가져옵니다 (light 또는 dark)
   const [colorScheme, setColorScheme] = useState(Appearance.getColorScheme());
   const [mytext, setMytext] = useState<string>("");
+  const [myresult, setMyresult] = useState<number>();
 
   // ⭐️ 스키마 변경을 감지하고 상태를 업데이트합니다.
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function TestPage1() {
       console.log(`num2: `, num2);
       let result = num1 + num2;
       console.log(`result: `, result);
-      alert(result);
+      setMyresult(result);
     }
   }
 
@@ -51,7 +52,7 @@ export default function TestPage1() {
         onSubmitEditing={myadd}
       />
       <View>
-        <Text>mytext : {mytext}</Text>
+        <Text>결과 : {myresult}</Text>
       </View>
     </View>
   );
